@@ -571,6 +571,7 @@ GameObject:
   - component: {fileID: 1968484526}
   - component: {fileID: 1968484527}
   - component: {fileID: 1968484528}
+  - component: {fileID: 1968484529}
   m_Layer: 0
   m_Name: God
   m_TagString: Untagged
@@ -619,3 +620,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 366168963}
+--- !u!114 &1968484529
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1968484525}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5aa20cadd53ed4f01a142d6693a6b37c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  point: 0
