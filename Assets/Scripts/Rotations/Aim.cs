@@ -14,7 +14,10 @@ public class Aim : MonoBehaviour
         // Draws a Line SceneView
         Debug.DrawRay(transform.position, directionToFace, Color.green);
         // access our current rotation = Quaternion Look Rotation
-        transform.rotation = Quaternion.LookRotation(directionToFace);
+        // transform.rotation = Quaternion.LookRotation(directionToFace);
         // make the rotation smooth
+        Quaternion targetRotation = Quaternion.LookRotation(directionToFace);
+        transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, Time.deltaTime);
+
     }
 }
