@@ -15,5 +15,9 @@ public class CreateCube : MonoBehaviour
         {
             UtilityHelper.SetPositionZero(this.gameObject);
         }
+        if(Input.GetKeyDown(KeyCode.R))
+        {
+            UtilityHelper.ChangeColor(this.gameObject, Color.red, true);
+        }
     }
 }
