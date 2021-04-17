@@ -52,5 +52,16 @@ public class ItemDB_D : MonoBehaviour
         {
             // Debug.Log("item name : " + item.name);
         }
+
+        /* How to use ths ContainKey Method */
+        if(itemDictionary.ContainsKey(60))
+        {
+            Debug.Log("You found the Key !!");
+            var randomItem = itemDictionary[60].name;
+        }
+        else
+        {
+            Debug.Log("Key dose not exist !!");
+        }
     }
 }
