@@ -9,14 +9,16 @@ public class Enemy_MossGiant : Enemy_Abstract , IDamgable
     {
         Debug.Log(damageAmount.ToString() + ": 受けたダメージ");
         health -= damageAmount;
+        if(health <= 0 )
+        {
+            Die();
+        }
     }
     void Start()
     {
         health = 10;
-        Attack();
-        DamageHealth(1);
-        // Die();
     }
+
     public override void Attack()
     {
 
