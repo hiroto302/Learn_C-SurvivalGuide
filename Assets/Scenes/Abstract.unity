@@ -442,7 +442,7 @@ GameObject:
   - component: {fileID: 2071256423}
   - component: {fileID: 2071256422}
   m_Layer: 0
-  m_Name: MossGiant
+  m_Name: Enemy_MossGiant
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
