@@ -2,13 +2,20 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Enemy_MossGiant : Enemy_Abstract
+public class Enemy_MossGiant : Enemy_Abstract , IDamgable
 {
-
+    public int Damage{ set; get; }
+    public void DamageHealth(int damageAmount)
+    {
+        Debug.Log(damageAmount.ToString() + ": 受けたダメージ");
+        health -= damageAmount;
+    }
     void Start()
     {
+        health = 10;
         Attack();
-        Die();
+        DamageHealth(1);
+        // Die();
     }
     public override void Attack()
     {
@@ -25,4 +32,6 @@ public class Enemy_MossGiant : Enemy_Abstract
         // 追加処理
         Debug.Log("やられたよ");
     }
+
+
 }
