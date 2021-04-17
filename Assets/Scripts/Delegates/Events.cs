@@ -9,6 +9,23 @@ public class Events : MonoBehaviour
 {
     public delegate void ActionClick();
     public static event ActionClick onClick;
+
+    public delegate void Teleport(Vector3 pos);
+    public static event Teleport onTeleport;
+
+    void Update()
+    {
+        if(Input.GetKeyDown(KeyCode.Space))
+        {
+            if(onTeleport != null)
+            {
+                Vector3 pos = new Vector3(5, 2, 0);
+                onTeleport(pos);
+            }
+        }
+    }
+
+    // push button event
     public void ButtonClick()
     {
         // turn all cubes red
@@ -17,4 +34,5 @@ public class Events : MonoBehaviour
             onClick();
         }
     }
+
 }
