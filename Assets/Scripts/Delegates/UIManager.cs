@@ -15,9 +15,11 @@ public class UIManager : MonoBehaviour
         Player_Delegates.onDeath += UpdateDeathCount;
     }
 
+    /* イベント関数の検証記述
     void Start()
     {
         Player_Delegates.OnDamageReceived(Player_Delegates.Health);
+        // Player_Delegates.onDeath(); Player_Delegates のイベント関数なのでこのクラスでは呼ぶことができない。 イベント関数が作成されたクラスで、そのイベントが発生したことを検知した時、このクラスに対応したメソッド(追加したもの)が実行される。
     }
     void Update()
     {
@@ -27,6 +29,7 @@ public class UIManager : MonoBehaviour
             Player_Delegates.OnDamageReceived(Player_Delegates.Health);
         }
     }
+    */
 
     public void UpdateHealth(int health)
     {

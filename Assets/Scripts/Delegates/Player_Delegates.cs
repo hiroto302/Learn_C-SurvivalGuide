@@ -9,8 +9,9 @@ public class Player_Delegates : MonoBehaviour
     // public delegate void OnDamageReceived(int currentHealth);
     // public static event OnDamageReceived onDamage;
 
-    // System.Action を使うことで、上記の２行を下記の１行で済む
+    // System.Action を使うことで、上記の２行を下記の１行で済む, ただし event 関数にしないと 他のクラスでも呼び出されるので注意
     public static Action<int> OnDamageReceived;
+    // public static event Action<int> OnDamageReceived;
 
     public delegate void OnDeath();
     public static event OnDeath onDeath;
