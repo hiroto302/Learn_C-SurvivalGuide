@@ -12,6 +12,8 @@ public class Delegates_ReturnType : MonoBehaviour
     CharacterLength c1;
     // Func 宣言 <引数, 返り値>
     public Func<string, int> FunkCharacterLength;
+    // Lambda
+    public Func<string, int> Funk2CharacterLength;
 
     void Start()
     {
@@ -26,6 +28,11 @@ public class Delegates_ReturnType : MonoBehaviour
         FunkCharacterLength = GetCharacters;
         int count2 = FunkCharacterLength("abcde");
         Debug.Log("Func : " + count2);
+
+        // Lambda
+        Funk2CharacterLength = (name) => name.Length; // 引数 => 返り値
+        int count3 = Funk2CharacterLength("abc");
+        Debug.Log("Lambda : " + count3);
     }
 
     int GetCharacters(string name)
