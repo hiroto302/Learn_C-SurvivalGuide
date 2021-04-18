@@ -29,7 +29,19 @@ public class FilterItems : MonoBehaviour
 
         // Average
         var buffAverage = items.Average(item => item.buff);
-        Debug.Log("Average : " + buffAverage);
+        // Debug.Log("Average : " + buffAverage);
+
+        // Define ths query expression : where
+        var result =
+            from item in items
+            where item.itemID > 0
+            select item;
+
+        foreach(var item in result)
+        {
+            Debug.Log(item.name);
+        }
+
     }
 
     // Update is called once per frame
