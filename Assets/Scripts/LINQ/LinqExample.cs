@@ -13,7 +13,9 @@ public class LinqExample : MonoBehaviour
         var nameFound = names.Any(name => name == "c");
         Debug.Log("nameFound : " + nameFound);
 
-        //
+        // Contains
+        var nameContain = name.Contains("d");
+        Debug.Log("nameContains : " + nameContain);
 
         // foreach (var name in names)
         // {
