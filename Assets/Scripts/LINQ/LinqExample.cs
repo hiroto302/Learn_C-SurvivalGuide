@@ -5,7 +5,7 @@ using System.Linq;
 
 public class LinqExample : MonoBehaviour
 {
-    string[] names = {"a", "a", "b", "c", "d", "e", "e"};
+    string[] names = {"abc", "a", "b", "c", "d", "e", "efgh"};
 
     void Start()
     {
@@ -20,6 +20,13 @@ public class LinqExample : MonoBehaviour
         // Distinct
         var uniqueNames = names.Distinct();
         foreach(var name in uniqueNames)
+        {
+            // Debug.Log(name);
+        }
+
+        // Where
+        var result = names.Where(n => n.Length > 2);
+        foreach(var name in result)
         {
             Debug.Log(name);
         }
