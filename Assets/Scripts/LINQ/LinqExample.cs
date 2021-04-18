@@ -6,6 +6,7 @@ using System.Linq;
 public class LinqExample : MonoBehaviour
 {
     string[] names = {"abc", "a", "b", "c", "d", "e", "efgh"};
+    int [] quizGrades = {1, 3, 5, 2, 10, 123};
 
     void Start()
     {
@@ -28,8 +29,16 @@ public class LinqExample : MonoBehaviour
         var result = names.Where(n => n.Length > 2);
         foreach(var name in result)
         {
-            Debug.Log(name);
+            // Debug.Log(name);
         }
+
+        // Where, OrderByDescending, Reverse
+        var passingGrades = quizGrades.Where(qg => qg > 4).OrderByDescending(q => q).Reverse();
+        foreach (var grade in passingGrades)
+        {
+            Debug.Log(grade);
+        }
+
 
 
         // foreach (var name in names)
