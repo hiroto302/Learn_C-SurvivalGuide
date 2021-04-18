@@ -47,4 +47,30 @@ public class PoolManager : MonoBehaviour
         }
         return _bulletPool;
     }
+
+        /*  loop though the bullet list
+            checking for in-active bullet
+            found one ? set it active and retrun it to the player
+            if no bullets available (all are turned on)
+            generate x amount of bullets and run the request bullet method */
+    public GameObject RequestBullet()
+    {
+        foreach(var bullet in _bulletPool)
+        {
+            if(bullet.activeInHierarchy == false)
+            {
+                bullet.SetActive(true);
+                return bullet;
+            }
+        }
+
+        // if we made it to this point ... we need to generate more bullets
+        // need to create a new bullet
+        GameObject newBullet = Instantiate(_bulletPrefab);
+        newBullet.transform.parent = _bulletContainer.transform;
+        _bulletPool.Add(newBullet);
+        return newBullet;
+
+        // return null;
+    }
 }
