@@ -13,5 +13,7 @@ public class Player_Singleton : MonoBehaviour
         ui.UpdateHealth();
         ui.UpdateScore();
         SpawnManager_Singleton.Instance.SpawnGameObject();
+
+        Debug.Log( "inheritObject.name : " + InheritMonoSingleton.Instance.name);
     }
 }
