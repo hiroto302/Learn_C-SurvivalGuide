@@ -11,7 +11,7 @@ public class GameManager_Singleton : MonoBehaviour
         {
             if(_instance == null)
             {
-                Debug.Log("The GameManager is NULL");
+                Debug.LogError("The GameManager is NULL");
             }
             return _instance;
         }
