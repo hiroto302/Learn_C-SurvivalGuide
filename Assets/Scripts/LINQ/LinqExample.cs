@@ -36,7 +36,7 @@ public class LinqExample : MonoBehaviour
         var passingGrades = quizGrades.Where(qg => qg > 4).OrderByDescending(q => q).Reverse();
         foreach (var grade in passingGrades)
         {
-            Debug.Log(grade);
+            // Debug.Log(grade);
         }
 
 
