@@ -70,7 +70,5 @@ public class PoolManager : MonoBehaviour
         newBullet.transform.parent = _bulletContainer.transform;
         _bulletPool.Add(newBullet);
         return newBullet;
-
-        // return null;
     }
 }
